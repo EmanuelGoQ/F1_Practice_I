@@ -12,6 +12,12 @@ public class TeamDriverA extends PitCrewTeam {
   }
 
   // getters and setters
+  public String getidCarro(){
+    return this.idCarro;
+  }
+  public void setidCarro(String idCarro) {
+    this.idCarro = idCarro;
+  }
 
   // own methods
   public void reunionEquipo() {

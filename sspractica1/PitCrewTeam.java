@@ -3,8 +3,6 @@ import java.util.ArrayList;
 public class PitCrewTeam {
 
   // attributes
-  private int carrosTuneados = 0; // cantidad de carros que el Pit Crew ha manipulado/areglado éxitosamente.
-  private boolean almorzado, agotado; // ¿el equipo ya almorzó? ¿el equipo está agotado?
   private ArrayList<String> group = new ArrayList<>();
   public FrontJack frontJack;
   public FrontWing frontWing;
@@ -16,32 +14,6 @@ public class PitCrewTeam {
   public TyreOn tyreOn;
 
   // get and setters
-
-  public void tunearCarro() {
-    System.out.println("El equipo de Pit Craw está tuneando el carro...");
-    carrosTuneados++;
-  }
-
-  public int getCarrosTuneados() {
-    return carrosTuneados;
-  }
-
-  public void almorzados(boolean bool) {
-    almorzado = bool;
-  }
-
-  public boolean getAlmorzados() {
-    return almorzado;
-  }
-
-  public void agotados(boolean bool) {
-    agotado = bool;
-  }
-
-  public boolean getAgotados() {
-    return agotado;
-  }
-
   public ArrayList<String> getGroup() {
     return group;
   }
@@ -56,6 +28,7 @@ public class PitCrewTeam {
   }
 
   public void defineTeam() {
+    Ready();
     frontJack = new FrontJack();
     frontWing = new FrontWing();
     lollipopMan = new LollipopMan();
@@ -64,5 +37,8 @@ public class PitCrewTeam {
     tyreGunner = new TyreGunner();
     tyreOff = new TyreOff();
     tyreOn = new TyreOn();
+  }
+  public void Ready(){
+    System.out.print("En el Pitcrew se prepran los puestos del equipo del ");
   }
 }

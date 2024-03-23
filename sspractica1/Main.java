@@ -1,13 +1,17 @@
+//Hecho por Alejandro Posada y Emanuel Gonzalez
 public class Main {
   public static void main(String[] args) {
 
+    System.out.println();
     // Instancias del equipo que apoya al TeamDriverA
     TeamDriverA TeamDriverA = new TeamDriverA("Supra");
     TeamDriverA.defineTeam();
+    System.out.println("Supra");
 
     // Instancias del equipo que apoya al TeamDriverB
     TeamDriverB TeamDriverB = new TeamDriverB("Ferrari");
     TeamDriverB.defineTeam();
+    System.out.println("Ferrari");
 
     // Instancias del equipo Eafun
     F1Team Eafun = new F1Team("Eafun", "1999", "Medellín", "Saitama", TeamDriverA, TeamDriverB);
@@ -101,14 +105,41 @@ public class Main {
     Eafun.presentation();
     System.out.println();
 
-    Eafun.teamDriverA.reunionEquipo();
-    System.out.println();
-    Eafun.teamDriverB.reunionEquipo();
-    System.out.println();
-
-    Eafun.teamDriverA.tyreGunner.operate();
-    Eafun.teamDriverA.tyreOff.operate();
+    System.out.println("---------------Inicia la carrera---------------\n");
 
     Eafun.CheerUpTeam();
+    
+    Eafun.teamDriverA.Drive();
+    Eafun.teamDriverA.Pit();
+    
+    Eafun.teamDriverA.frontJack.operate();
+    Eafun.teamDriverA.rearJack.operate();
+    Eafun.teamDriverA.tyreGunner.operate();
+    Eafun.teamDriverA.tyreOff.operate();
+    Eafun.teamDriverA.tyreOn.operate();
+    Eafun.teamDriverA.sideJack.operate();
+    Eafun.teamDriverA.frontWing.operate();
+    Eafun.teamDriverA.lollipopMan.operate();
+
+    Eafun.teamDriverA.reunionEquipo();
+    System.out.println();
+
+
+    Eafun.teamDriverB.Drive();
+    Eafun.teamDriverB.Pit();
+
+    Eafun.teamDriverB.frontJack.operate();
+    Eafun.teamDriverB.rearJack.operate();
+    Eafun.teamDriverB.tyreGunner.operate();
+    Eafun.teamDriverB.tyreOff.operate();
+    Eafun.teamDriverB.tyreOn.operate();
+    Eafun.teamDriverB.sideJack.operate();
+    Eafun.teamDriverB.frontWing.operate();
+    Eafun.teamDriverB.lollipopMan.operate();
+
+    Eafun.teamDriverB.reunionEquipo();
+    System.out.println();
+    //Se puede repetir estas lineas hasta que se desee indicar que se acaba la carrera
+    System.out.println("Despues de una ardua carrera, el equipo de F1 ha terminado la carrera!!\n\nFelicitaiones a todos los equipos que han participado en la carrera!!\n\nHasta pronto... :)");
   }
 }

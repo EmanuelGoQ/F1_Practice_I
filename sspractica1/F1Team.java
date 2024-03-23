@@ -59,6 +59,6 @@ public class F1Team {
     System.out.println("Manager: " + manager);
   }
   public void CheerUpTeam(){
-    System.out.println("!"+this.manager+" está haciendo todo lo posible por animar a sus conductores desde su sede en "+this.headquarters+"!");
+    System.out.println("!"+this.manager+" está haciendo todo lo posible por animar a sus conductores desde su sede en "+this.headquarters+"!\n");
   }
 }
